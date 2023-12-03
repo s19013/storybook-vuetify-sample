@@ -1,12 +1,17 @@
 import Counter from "@/components/Counter.vue";
 import { within, fireEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
+import { action } from '@storybook/addon-actions';
 
 
 export default {
   title: "Counter",
   component: Counter,
-  argTypes: {}
+  tags: ['autodocs'],
+  argTypes: {
+    onIncrement: action("increment"),
+    onReset: action("reset")
+  }
 }
 
 const Template = (args) => ({
