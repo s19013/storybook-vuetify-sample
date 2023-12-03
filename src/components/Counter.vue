@@ -13,7 +13,7 @@ const reset = () => {
 <template>
   <div>
     <p>Count: {{ count }}</p>
-    <button @click="increment">Increment</button>
-    <button @click="reset">Reset</button>
+    <v-btn @click="increment">Increment</v-btn>
+    <v-btn @click="reset">Reset</v-btn>
   </div>
 </template>
