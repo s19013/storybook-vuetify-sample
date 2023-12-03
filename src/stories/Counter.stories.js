@@ -18,15 +18,29 @@ const Template = (args) => ({
 });
 
 export const Default = {
-    play: async ({ canvasElement }) =>{
+    play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
-
         expect(canvas.getByText('Count: 0')).toBeInTheDocument()
+    }
+}
+
+export const Increment = {
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
 
         await fireEvent.click(canvas.getByText('Increment'));
         await fireEvent.click(canvas.getByText('Increment'));
 
         expect(canvas.getByText('Count: 2')).toBeInTheDocument()
+    }
+}
+
+export const Reset = {
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+
+        await fireEvent.click(canvas.getByText('Increment'));
+        await fireEvent.click(canvas.getByText('Increment'));
 
         await fireEvent.click(canvas.getByText('Reset'));
 
