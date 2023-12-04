@@ -1,9 +1,12 @@
 <template>
   <v-app>
-    <v-main>
-      <slot name="story"></slot>
-    </v-main>
+    <v-main><slot name="story"></slot></v-main>
   </v-app>
 </template>
 
-<script></script>
+<style>
+.v-application__wrap {
+  /* !importantしないと無駄に余白がつくられてしまう */
+  min-height: auto !important;
+}
+</style>
