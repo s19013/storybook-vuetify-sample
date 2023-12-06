@@ -8,6 +8,7 @@ export default mergeConfig(
   viteConfig,
   defineConfig({
     test: {
+        environment: 'jsdom',
         globals: true,
         include: ['./test/**/*.{test,spec}.?(c|m)[jt]s?(x)'],
         root: fileURLToPath(new URL('./', import.meta.url))
