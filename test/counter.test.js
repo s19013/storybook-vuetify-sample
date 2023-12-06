@@ -1,7 +1,8 @@
 import Counter from '@/components/Counter.vue'
+import { mount } from '@vue/test-utils'
 
-test("increment", async () => {
-    const counter = new Counter
-    counter.increment()
-    expect(counter.count).toBe(1)
+test("increment", () => {
+    const wrapper = mount(Counter)
+    wrapper.vm.increment()
+    expect(wrapper.vm.count).toBe(1)
 })
