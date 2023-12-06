@@ -1,4 +1,4 @@
-import Counter from '@/src/components/Counter.vue'
+import Counter from '@/components/Counter.vue'
 
 test("increment", async () => {
     const counter = new Counter
