@@ -1,25 +1,16 @@
 /** @type { import('@storybook/vue3').Preview } */
 import { setup } from '@storybook/vue3';
 import { withVuetifyTheme } from './withVeutifyTheme.decorator';
+import vuetify from '@/plugins/vuetify'
 
-import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
-
-const vuetify = createVuetify({
-  components,
-  directives,
-})
-
+// このsetupがなにやってるのか説明できない｡｢前もってなんか準備してるとしか説明できない｣
 setup((app) => {
   app.use(vuetify)
 });
 
-export const decorators = [withVuetifyTheme];
-
 const preview = {
   parameters: {
+    decorators : {withVuetifyTheme},
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
