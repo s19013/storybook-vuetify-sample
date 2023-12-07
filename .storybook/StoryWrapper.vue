@@ -6,7 +6,8 @@
 
 <style>
 .v-application__wrap {
-  /* !importantしないと無駄に余白がつくられてしまう */
   min-height: auto !important;
+  /* これをしないと大きな余白が作られる */
+  /* !importantしないと設定が上書きされるもよう */
 }
 </style>
