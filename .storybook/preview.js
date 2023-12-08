@@ -8,9 +8,10 @@ setup((app) => {
   app.use(vuetify)
 });
 
+export const decorators = [withVuetifyTheme]
+
 const preview = {
   parameters: {
-    decorators : {withVuetifyTheme},
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
